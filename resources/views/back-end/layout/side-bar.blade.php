@@ -34,6 +34,12 @@
             </a>
         </li>
 
+        <li>
+            <a href="{{route('users.edit' , ['id' => Auth::user()->id])}}" class="{{edit_profle_is_active('users')}}">
+                <i class="fas fa-edit"></i><span>تعديل بيانات الحساب</span>
+            </a>
+        </li>
+
         @if( Auth::user()->role == 1 )
         <li>
             <a id="users"href="{{route('users.index')}}" class="{{is_active('users')}}">
@@ -41,11 +47,7 @@
             </a>
         </li>
         @endif
-        <li>
-            <a href="{{route('users.edit' , ['id' => Auth::user()->id])}}" class="{{edit_profle_is_active('users')}}">
-                <i class="fas fa-edit"></i><span>تعديل بيانات الحساب</span>
-            </a>
-        </li>
+
         <li class="{{is_active('services')}}">
             <a href="{{route('services.index')}}"  class="{{is_active('services')}}">
                     <i class="fa fa-image"></i><span> خدماتنا</span>
@@ -54,13 +56,13 @@
         </li>
         <li class="{{is_active('clients')}}">
             <a href="{{route('clients.index')}}"  class="{{is_active('clients')}}">
-                    <i class="fa fa-image"></i><span>عملاء</span>
+                    <i class="fa fa-image"></i><span>عملائنا</span>
             </a>
 
         </li>
         <li class="{{is_active('employees')}}">
             <a href="{{route('employees.index')}}"  class="{{is_active('employees')}}">
-                    <i class="fa fa-image"></i><span>موظففين</span>
+                    <i class="fa fa-image"></i><span>الموظفين</span>
             </a>
 
         </li>
